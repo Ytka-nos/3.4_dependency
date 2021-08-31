@@ -4,6 +4,16 @@ import ru.netology.domain.FilmAtPlaybill;
 public class CartManager {
     private FilmAtPlaybill[] films = new FilmAtPlaybill[0];
 
+    //  2 конструктора: пустой и с resultLength.
+
+//    public CartManager(int resultLength) {
+//            this.resultLength = resultLength;
+//
+//        }
+//
+//    public CartManager() {
+//        }
+
     public void add(FilmAtPlaybill film) {
         // создаём новый массив размером на единицу больше
         int length = films.length + 1;
@@ -30,19 +40,10 @@ public class CartManager {
             int index = films.length - i - 1;
             result[i] = films[index];
         }
+
         return result;
 
 
-        //  2 конструктора: пустой и с resultLength. Внутри метода менеджера (как мне ответили на вопрос в чате)
-//  Только почему resultLength красный??
-
-//    public CartManager(int resultLength) {
-//            this.resultLength = resultLength;
-//
-//        }
-//
-//    public CartManager() {
-//        }
 
 
 
