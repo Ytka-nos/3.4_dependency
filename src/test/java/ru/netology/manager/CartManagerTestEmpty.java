@@ -1,25 +1,21 @@
 package ru.netology.manager;
+
 import org.junit.jupiter.api.Test;
 import ru.netology.domain.FilmAtPlaybill;
-import ru.netology.manager.CartManager;
+
 
 import static org.junit.jupiter.api.Assertions.*;
 
-public class CartManagerTestNonEmpty {
+public class CartManagerTestEmpty {
     @Test
     public void shouldGetAll() {
         CartManager manager = new CartManager();
-        FilmAtPlaybill first = new FilmAtPlaybill(1, 1, "first");
-        FilmAtPlaybill second = new FilmAtPlaybill(2, 2, "second");
-        FilmAtPlaybill third = new FilmAtPlaybill(3, 3, "third");
-        manager.add(first);
-        manager.add(second);
-        manager.add(third);
+
 
         manager.getAll();
 
         FilmAtPlaybill[] actual = manager.getAll();
-        FilmAtPlaybill[] expected = new FilmAtPlaybill[]{third, second,first};
+        FilmAtPlaybill[] expected = new FilmAtPlaybill[]{};
 
         assertArrayEquals(expected, actual);
     }
@@ -28,13 +24,11 @@ public class CartManagerTestNonEmpty {
     public void shouldAdd() {
         CartManager manager = new CartManager();
         FilmAtPlaybill first = new FilmAtPlaybill(1, 1, "first");
-        FilmAtPlaybill second = new FilmAtPlaybill(2, 2, "second");
+
         manager.add(first);
 
-        manager.add(second);
-
         FilmAtPlaybill[] actual = manager.getAll();
-        FilmAtPlaybill[] expected = new FilmAtPlaybill[]{second,first};
+        FilmAtPlaybill[] expected = new FilmAtPlaybill[]{first};
 
         assertArrayEquals(expected, actual);
 
