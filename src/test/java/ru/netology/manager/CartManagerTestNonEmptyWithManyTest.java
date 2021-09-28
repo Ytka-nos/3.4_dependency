@@ -5,7 +5,7 @@ import ru.netology.domain.FilmAtPlaybill;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-public class CartManagerTestNonEmptyWithMany {
+public class CartManagerTestNonEmptyWithManyTest {
     @Test
     public void shouldGetAllBeforeLimitDefault() {
         CartManager manager = new CartManager();

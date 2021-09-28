@@ -6,7 +6,7 @@ import ru.netology.domain.FilmAtPlaybill;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-public class CartManagerTestEmpty {
+public class CartManagerTestEmptyTest {
     @Test
     public void shouldGetAll() {
         CartManager manager = new CartManager();
